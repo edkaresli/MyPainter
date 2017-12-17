@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Circles</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <h3>Drawing Shapes</h3> 
+    <div>
+        <ul class="toolbox">
+            <li id="btns">
+              <div>        
+                <input type="radio" name="shape" id="point" value="point" checked>Point<br>
+                <input type="radio" name="shape" id="freehand" value="freehand">Freehand<br>
+                <input type="radio" name="shape" id="line" value="line">Line<br>
+                <input type="radio" name="shape" id="circle" value="circle">Circle<br>
+                <input type="radio" name="shape" id="rect" value="rect">Rectangle<br>                
+              </div>
+              <div class="sliders">
+                <div class="in-line">
+                  <p>Red</p>
+                  <p>Green</p>
+                  <p>Blue</p>                  
+                </div>
+                <div class="in-line">
+                  <input type="range" min="0" max="255" value="127" name="Red" id="red" >
+                  <input type="range" min="0" max="255" value="127" name="Green" id="green" >
+                  <input type="range" min="0" max="255" value="127" name="Blue" id="blue" >
+                </div>                                                
+              </div>
+              <div><p id="rgbcolor">RGB(127, 127, 127)</p><div id="square"></div></div>
+              <input type="button" value="Clear" id="clearbtn">              
+            </li>            
+            <li id="cnvs">
+              <div>
+                <canvas id="mainCanvas" class="canvas" width="600" height="400"></canvas>  
+                <h3 id="coords">(X, Y) : (0 , 0)</h3>
+              </div> 
+            </li>
+          </ul>
+    </div>                                                         
+  </div>  
+  <script src="scripts/main.js"></script>
+</body>
+</html>
